@@ -31,20 +31,19 @@ print(df1)
 
 #df1 = np.where(df1.select_dtypes(include=[np.float]),round(4))
 
-print(df1.dtypes==float)
+
 
 #np.where(df1.dtypes==float,round(4),df1.dtypes)
 #df1[df1.select_dtypes(['float'])] = df1[df1.select_dtypes(['float'])].round(4)
 
 #print(df1[df1.select_dtypes(['float']).list()].round(4))
 
-mylist = list(df1.select_dtypes(include=['float']).columns)
+mylist = list(df1.select_dtypes(include=['float']).columns)  #Selecting all float columns 
 
 print(mylist)
 
 print(df1)
-df1[mylist] = df1[mylist].round(4)   #df['Value'].round(decimals=3)
-#np.round(df1.select_dtypes(include=['float']), 4)
+df1[mylist] = df1[mylist].round(4)   #applying roundoff on all float columns
 
 
 
