@@ -3,7 +3,6 @@ import pandas as pd
 import sys
 
 
-seperator=","
 #python DataFramesComparsion.py "," "sourcefilepath" "targetfilepath" "roundoff"
 
 #python DataFramesComparsion.py "," "C:\\source\\1000000 Sales Records.csv" "C:\\target\\1000000 Sales Records.csv" 2
