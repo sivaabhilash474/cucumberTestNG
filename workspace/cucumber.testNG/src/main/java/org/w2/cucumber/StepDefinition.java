@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import org.apache.log4j.Logger;
+import org.w2.selnium.utilities.LogUtils;
 import org.w2.selnium.utilities.ScenarioHelper;
 import org.w2.selnium.utilities.TakeScreenShot;
 import org.w2.selnium.utilities.WebDriverUtils;
@@ -16,6 +17,7 @@ import cucumber.api.java.en.When;
 public class StepDefinition {
 	static Logger log = Logger.getLogger(StepDefinition.class.getName());
 	
+	
 	public static void main(String[] args) throws IOException {
 		log.info("log info..");
 		
@@ -27,8 +29,10 @@ public class StepDefinition {
 	public void navigated_to_login_page() throws Throwable {
 		CucumberSteps scenario = new CucumberSteps();
 		scenario.getScenarioName();
-		WebDriverUtils.getWebDriver().get("http://www.facebook.com");
-		TakeScreenShot.takeScreenShot(WebDriverUtils.getWebDriver(), "\\cucumber.testNG\\target");
+//		WebDriverUtils.getWebDriver().get("https://www.facebook.com");
+		WebDriverUtils.getWebDriver().get("https://www.google.com");
+		LogUtils.logInfo("Successfully Navigated to the website", true);
+//		TakeScreenShot.takeScreenShot(WebDriverUtils.getWebDriver(), "/cucumber.testNG/target");
 	    System.out.println("@Given------navigated to login");
 	    
 	    

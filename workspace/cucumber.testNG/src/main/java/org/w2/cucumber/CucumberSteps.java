@@ -8,6 +8,7 @@ import cucumber.api.java.Before;
 public class CucumberSteps {
 
 	private static HashMap<Integer,String> scenarios;
+	private static Scenario scenario;
 
 	public CucumberSteps(){ //or even inside of your singleton's getInstance();
 //		logger.info("Scenario Helper Constructo....");
@@ -26,7 +27,14 @@ public class CucumberSteps {
 		System.out.println("Scenario Tag Names: "+scenario.getSourceTagNames());
 		System.out.println("@Before method");
 	    addScenario(scenario.getName());
+	    this.scenario = scenario;
 	}
+	
+	public static Scenario getScenario1() {
+		return scenario;
+	}
+	
+	
 	
 	private void addScenario(String scenario){
 		System.out.println("addScenario() method...");
