@@ -19,10 +19,14 @@ public class TakeScreenShot {
         //Call getScreenshotAs method to create image file
 
                 File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+                
+                System.out.println(SrcFile.getName());
+                System.out.println(SrcFile.getAbsolutePath());
 
             //Move image file to new destination
+                System.out.println("File copying to: "+ fileWithPath+SrcFile.getName());
 
-                File DestFile=new File(fileWithPath);
+                File DestFile=new File(fileWithPath+SrcFile.getName());
 
                 //Copy file at destination
 
